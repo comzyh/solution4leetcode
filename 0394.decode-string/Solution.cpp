@@ -25,13 +25,11 @@ public:
             } else {
                 str ++; // skip [
                 string repstr = decode(str);
+                str ++; // skip ]
                 while(rep --){
                     ans.append(repstr);
                 }    
             }    
-        }
-        if (*str == ']') {
-                str ++;
         }
         return ans;
     }
