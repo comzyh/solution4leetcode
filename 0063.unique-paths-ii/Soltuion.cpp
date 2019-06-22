@@ -7,6 +7,7 @@ public:
         int m = obstacleGrid.size();
         int n = obstacleGrid[0].size();
         vector<vector<long long> > dp(m, vector<long long>(n, 0)); // Intermediate  result can overflow
+        dp[0][0] = 1;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (obstacleGrid[i][j]) {
